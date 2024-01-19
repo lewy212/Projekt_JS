@@ -1,0 +1,9 @@
+<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" >
+  <mat-icon>more_vert</mat-icon>
+</button>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item  (click)="openDialog()" *ngIf="post.wasEdited">
+    <mat-icon>history</mat-icon>
+    <span>Post przed edycją</span>
+  </button>
+</mat-menu>

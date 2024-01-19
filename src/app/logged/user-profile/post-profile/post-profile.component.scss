@@ -1,0 +1,57 @@
+/* Styl dla .container */
+.container {
+  max-width: 400px; /* Maksymalna szerokość kontenera */
+  margin: 20px auto; /* Automatyczne centrowanie kontenera */
+  background-color: #f5f5f5; /* Kolor tła */
+  padding: 20px; /* Wewnętrzny odstęp */
+  border: 1px solid #ddd; /* Ramka wokół kontenera */
+  border-radius: 8px; /* Zaokrąglenie rogów */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Cień */
+}
+
+/* Styl dla h3 */
+.container h3 {
+  color: #2c3e50; /* Granatowy kolor tekstu */
+  margin-bottom: 10px; /* Margines na dole */
+}
+
+/* Styl dla ul */
+.container ul {
+  list-style: none; /* Usunięcie domyślnego znacznika listy */
+  padding: 0; /* Usunięcie wewnętrznego odstępu listy */
+}
+
+/* Styl dla li */
+.container li {
+  margin-bottom: 8px; /* Margines na dole dla każdego elementu listy */
+  color: #333; /* Kolor tekstu */
+}
+
+.btn-text-right{
+  text-align: right;
+}
+/* Styl dla przycisków Edytuj i Anuluj edycję */
+.container button {
+  background-color: #3498db; /* Kolor tła przycisku */
+  color: #fff; /* Kolor tekstu przycisku */
+  padding: 8px 12px; /* Wewnętrzny odstęp przycisku */
+  border: none; /* Usunięcie obramowania przycisku */
+  border-radius: 4px; /* Zaokrąglenie rogów przycisku */
+  cursor: pointer; /* Efekt kursora na pointer podczas najechania myszką */
+  text-align: right;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Efekt przejścia dla tła i koloru tekstu */
+}
+
+.container button:hover {
+  background-color: #2980b9; /* Kolor tła przycisku po najechaniu myszką */
+}
+
+/* Dodatkowy styl dla przycisku Anuluj edycję */
+.container button.cancel-btn {
+  background-color: #e74c3c; /* Kolor tła przycisku Anuluj edycję */
+}
+
+.container button.cancel-btn:hover {
+  background-color: #c0392b; /* Kolor tła przycisku Anuluj edycję po najechaniu myszką */
+}
+

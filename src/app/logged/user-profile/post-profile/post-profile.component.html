@@ -1,0 +1,33 @@
+<div class="container">
+  <div>
+    Post
+    <ul>
+      <li>
+        <div class="btn-text-right">
+          <button class="edit-btn" (click)="editPost()">Edytuj</button>
+        </div>
+
+        title: {{post.title}}
+      </li>
+      <li>
+        content: {{editing ? editedContent : post.content}}
+        <div *ngIf="editing">
+          <textarea [(ngModel)]="editedTitle"></textarea>
+          <tr>
+
+          </tr>
+          <textarea [(ngModel)]="editedContent"></textarea>
+        </div>
+        <div class="btn-text-right">
+          <button class="edit-btn cancel-btn" *ngIf="editing === true" (click)="exitEditingPost()">Anuluj edycję</button>
+        </div>
+      </li>
+      <li>
+        liczba lików: {{post.liczbaLikow ? post.liczbaLikow.length : 0}}
+      </li>
+    </ul>
+  </div>
+  Komentarze:
+  <app-comments-post *ngFor="let comment of post.comments" [comment]="comment"></app-comments-post>
+</div>
+

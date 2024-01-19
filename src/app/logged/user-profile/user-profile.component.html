@@ -1,0 +1,37 @@
+<body>
+  <div class="dane">
+    <div>
+      Dane:
+      <ul>
+        <li>
+          email: {{user.email}}
+        </li>
+        <li>
+          password: {{user.password}}
+        </li>
+        <li>
+          name: {{user.name}}
+        </li>
+        <li>
+          surname: {{user.surname}}
+        </li>
+        <li>
+          liczba obserwatorów: {{user.liczbaObserwujacych ? user.liczbaObserwujacych.length : 0 }}
+        </li>
+        <li>
+          liczba obserwowanych: {{user.osobyKtoreObserwuje ? user.osobyKtoreObserwuje.length : 0 }}
+        </li>
+        <li>
+          liczba postów: {{user.posty ? user.posty.length : 0 }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="kontener-posty">
+    <div class="button-container">
+      <button class="but" mat-raised-button color="accent" [routerLink]="'/logged/user-profile/add-post'">Dodaj Post</button>
+    </div>
+    <app-post-profile *ngFor="let post of user.posty" [post]="post"></app-post-profile>
+  </div>
+</body>

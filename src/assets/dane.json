@@ -1,0 +1,87 @@
+[
+  {
+    "_id": 1,
+    "_email": "admin@mail.pl",
+    "_nickname": "admin",
+    "_password": "admin",
+    "_name": "Imie_admina",
+    "_surname": "Nazwisko_admina",
+    "_posty": null
+  },
+  {
+    "_id": 2,
+    "_email": "user@mail.pl",
+    "_nickname": "user",
+    "_password": "user",
+    "_name": "Imie_usera",
+    "_surname": "Nazwisko_usera",
+    "_posty": [
+      {
+        "_id": 1,
+        "_title": "Ulubione gry",
+        "_content": "Moimi ulubionymi grami sa lol i cs",
+        "_wasEdited": false,
+        "_liczbaLikow": null,
+        "_previousEditions": null,
+        "_comments": null
+      },
+      {
+        "_id": 2,
+        "_title": "Ulubione filmy",
+        "_content": "Moimi ulubionymi filmami sa gwiezdne wojny i Harry Potter",
+        "_wasEdited": false,
+        "_liczbaLikow": null,
+        "_previousEditions": null,
+        "_comments": null
+      }
+    ]
+  },
+  {
+    "_id": 3,
+    "_email": "user2@mail.pl",
+    "_nickname": "user2",
+    "_password": "user2",
+    "_name": "Imie_usera2",
+    "_surname": "Nazwisko_usera2",
+    "_posty": [
+      {
+        "_id": 3,
+        "_title": "Ulubione gry us2",
+        "_content": "Moimi ulubionymi grami sa lol i cs us2",
+        "_wasEdited": false,
+        "_liczbaLikow": null,
+        "_previousEditions": null,
+        "_comments": [
+          {
+            "_nickname": "nick_usera2",
+            "_content": "Pierwszy komentarz ever",
+            "_wasEdited": false
+          },
+          {
+            "_nickname": "nick_admina",
+            "_content": "Drugi komentarz ever :)",
+            "_wasEdited": true
+          }
+        ]
+      },
+      {
+        "_id": 4,
+        "_title": "Ulubione filmy us2",
+        "_content": "Moimi ulubionymi filmami sa gwiezdne wojny i Harry Potter us2",
+        "_wasEdited": false,
+        "_liczbaLikow": null,
+        "_previousEditions": null,
+        "_comments": null
+      }
+    ]
+  },
+  {
+    "_id": 4,
+    "_email": "user3@mail.pl",
+    "_nickname": "user3",
+    "_password": "user3",
+    "_name": "Imie_usera3",
+    "_surname": "Nazwisko_usera3",
+    "_posty": null
+  }
+]

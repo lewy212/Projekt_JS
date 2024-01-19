@@ -1,0 +1,7 @@
+<form [formGroup]="form" (ngSubmit)="dodajKomentarz()">
+  <mat-form-field>
+    <mat-label>Comment</mat-label>
+    <input matInput type="text" formControlName="content" (blur)="onBlur('content')">
+    <div *ngIf="fieldBlurred['content'] && content.invalid && (content.dirty || content.touched)" class="error-message">Content: min 4</div>
+  </mat-form-field><br>
+</form>

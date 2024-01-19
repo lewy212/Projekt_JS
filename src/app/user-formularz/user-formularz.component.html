@@ -1,0 +1,41 @@
+<div id = "container">
+
+  <form [formGroup]="form" (ngSubmit)="register()">
+    <h1>Zarejestruj się</h1>
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput type="text" formControlName="email"(blur)="onBlur('email')">
+      <div *ngIf="fieldBlurred['email']&&email.invalid && (email.dirty || email.touched)" class="error-message">Email nie wprowadzony prawidłowo</div>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <mat-label>Nickname</mat-label>
+      <input matInput type="text" formControlName="nickname" (blur)="onBlur('nickname')">
+      <div *ngIf="fieldBlurred['nickname']&&nickname.invalid && (nickname.dirty || nickname.touched)" class="error-message">Nickname: min 4, max 20</div>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password" (blur)="onBlur('password')" [appPasswordSpecialValidator]="['!', '@', '#', '$', '%', '^', '&', '*']">
+      <div *ngIf="fieldBlurred['password'] && password.invalid && (password.dirty || password.touched)" class="error-message">
+        Password: min 4, 1 znak specjalny
+      </div>
+    </mat-form-field><br>
+
+
+    <mat-form-field>
+      <mat-label>Name</mat-label>
+      <input matInput type="text" formControlName="name" (blur)="onBlur('name')">
+      <div *ngIf="fieldBlurred['name']&&name.invalid && (name.dirty || name.touched)" class="error-message">Name: min 2, zaczyna się wielką literą</div>
+    </mat-form-field><br>
+
+    <mat-form-field>
+      <mat-label>Surname</mat-label>
+      <input matInput type="text" formControlName="surname" (blur)="onBlur('surname')">
+      <div *ngIf="fieldBlurred['surname']&&surname.invalid && (surname.dirty || surname.touched)" class="error-message">Surname: min 2, zaczyna się wielką literą</div>
+    </mat-form-field><br>
+
+    <button mat-raised-button color="but" type="submit" [disabled]=form.invalid>Wyślij</button>
+
+  </form>
+</div>

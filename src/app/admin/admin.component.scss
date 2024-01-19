@@ -1,0 +1,58 @@
+h1 {
+  color: #2c3e50;
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.mat-app-background.basic-containter {
+  background-color: #f0f0f0;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid black;
+  margin-bottom: 40px;
+}
+
+.headertext {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  display: flex;
+  position: relative;
+
+}
+
+.headertext a {
+  margin-right: 30px;
+  color: #ffffff;
+}
+
+.headerlogin {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerright {
+  position: absolute;
+  right: 0;
+}
+
+.headerleft {
+  position: absolute;
+  left: 0;
+  margin-left: 10px;
+}

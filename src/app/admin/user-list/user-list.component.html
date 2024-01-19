@@ -1,0 +1,7 @@
+<div class="container" >
+  <h1>Lista użytkowników</h1>
+  <br>
+  <button mat-raised-button class="zarejestruj_button" color="warn" (click)="zarejestruj_uzytkownika()">Zarejestruj użytkownika</button>
+
+  <app-user-list-element *ngFor="let user of users" [user]="user"></app-user-list-element>
+</div>

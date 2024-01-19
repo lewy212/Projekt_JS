@@ -1,0 +1,28 @@
+
+  <input type="text" placeholder="search" [(ngModel)]="searchText">
+  <div *ngFor="let post of postList | wyszukaj: searchText" class="post-item" (mouseenter)="onSelect(post)">
+    <div class="post-header">
+      <p><span class="pbody profil-span" (click)="wyswietlProfil(post)">Profil: {{znajdzUsera(post.idUsera)}}</span></p>
+      <p><span class="pbody">Tytuł: {{post.title}}</span></p>
+      <p><span class="pbody">Treść: {{post.content}}</span></p>
+
+      <app-post-menu [post]="post" *ngIf="post.wasEdited"></app-post-menu>
+
+
+    </div>
+
+    <div class="post-comment">
+      <div *ngFor="let comment of post.comments">
+        <p><span class="pbody"> <strong>{{comment.nickname}}</strong> {{comment.content}}</span></p>
+      </div>
+      <app-comment-formularz [post]="post"></app-comment-formularz>
+    </div>
+    <div *ngIf="post.liczbaLikow != null;else elseBlock">
+      <p><span class="pbody">Like: {{post.liczbaLikow.length}}</span></p>
+    </div>
+    <ng-template #elseBlock>
+      <p><span class="pbody">Like: 0</span></p>
+    </ng-template>
+    <app-add-like [czyWyswielic]="likedPost(post.id)" (dodajLikePost)="addLike()"></app-add-like>
+
+  </div>

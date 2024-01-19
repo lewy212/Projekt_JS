@@ -1,0 +1,47 @@
+<header>
+  <div *ngIf="isLoggedIn(); else notLoggedIn">
+    <div *ngIf="isAdmin(); else regularUser">
+      <!-- Sekcja dla administratora -->
+      <div class="headertext">
+        <div class="headerleft">
+          <a>Blog</a>
+        </div>
+        <button class="but" mat-raised-button color="accent" [routerLink]="'/home'">Home</button>
+        <button class="but" mat-raised-button color="accent" [routerLink]="'/admin/allUsers'">Lista Użytkowników</button>
+        <div class="headerright">
+          <a>Zalogowano jako: {{userSession.nickname}}</a><br>
+          <button mat-raised-button color="accent" (click)="logout()">Wyloguj Się</button>
+        </div>
+      </div>
+    </div>
+    <ng-template #regularUser>
+      <!-- Sekcja dla zwykłego użytkownika -->
+      <div class="headertext">
+        <div class="headerleft">
+          <a>Blog</a>
+        </div>
+        <button class="but" mat-raised-button color="accent" [routerLink]="'/home'">Home</button>
+        <button class="but" mat-raised-button color="accent" [routerLink]="'/logged/postlist'">Posty</button>
+        <button class="but" mat-raised-button color="accent" [routerLink]="'/logged/postlist/obserwujacy'">Obserwujący</button>
+        <button class="but" mat-raised-button color="accent" [routerLink]="'/logged/user-profile'">Profil</button>
+        <div class="headerright">
+          <a>Zalogowano jako: {{userSession.nickname}}</a><br>
+          <button mat-raised-button color="accent" (click)="logout()">Wyloguj Się</button>
+        </div>
+      </div>
+    </ng-template>
+  </div>
+  <ng-template #notLoggedIn>
+    <!-- Sekcja dla niezalogowanego użytkownika -->
+    <div class="headertext">
+      <div class="headerleft">
+        <a>Blog</a>
+      </div>
+      <button class="but" mat-raised-button color="accent" [routerLink]="'/home'">Home</button>
+      <div class="headerright">
+        <button mat-raised-button color="accent" [routerLink]="'/login'">Zaloguj Się</button>
+        <button mat-raised-button color="accent" [routerLink]="'/user-formularz'">Zarejestruj Się</button>
+      </div>
+    </div>
+  </ng-template>
+</header>

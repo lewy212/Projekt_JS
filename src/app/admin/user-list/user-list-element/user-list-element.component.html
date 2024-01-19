@@ -1,0 +1,32 @@
+<div class="container" #pierwszyDiv>
+  <h3 appUserRankDirective [nick]="user.nickname.valueOf()"  [pierwszyDiv]="pierwszyDiv" color="red" font="courier">{{ user.nickname }}</h3>
+  <div>
+  Dane:
+    <ul>
+      <li>
+        email: {{ user.email.toString() | titlecase }} //dodalem filtr titlecase
+      </li>
+      <li>
+        password:{{user.password}}
+    </li>
+      <li>
+        name: {{user.name}}
+      </li>
+      <li>
+        surname: {{user.surname}}
+      </li>
+      <li>
+        liczba obserwujacych: {{user.liczbaObserwujacych? user.liczbaObserwujacych.length: 0}}
+      </li>
+      <li>
+        liczba obserwowanych: {{user.osobyKtoreObserwuje ? user.osobyKtoreObserwuje.length : 0 }}
+      </li>
+      <li>
+        liczba postów: {{user.posty ? user.posty.length : 0 }}
+      </li>
+    </ul>
+    <button mat-raised-button color="warn" *ngIf="user.id===1" disabled (click)="deleteUser()">Delete user</button>
+    <button mat-raised-button color="warn"*ngIf="user.id!==1" (click)="deleteUser()">Delete user</button>
+    <button mat-raised-button color="warn" color="warn" (click)="editUser()">Edit user</button>
+  </div>
+</div>

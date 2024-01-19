@@ -1,0 +1,14 @@
+<div class="post-header">
+
+  <p><span class="pbody">Tytuł: {{post.title}}</span></p>
+  <p><span class="pbody">Treść: {{post.content}}</span></p>
+  <div *ngIf="post.liczbaLikow != null;else elseBlock">
+    <p><span class="pbody">Like: {{post.liczbaLikow.length}}</span></p>
+  </div>
+  <ng-template #elseBlock><p><span class="pbody">Like: 0</span></p></ng-template>
+  <div class="post-comment">
+    <div *ngFor="let comment of post.comments">
+      <p><span class="pbody"> <strong>{{comment.nickname}}</strong> {{comment.content}}</span></p>
+    </div>
+  </div>
+</div>
